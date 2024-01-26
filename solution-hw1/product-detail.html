@@ -16,21 +16,21 @@
 
     <section class="headlines">
       <a href="product-gallery.html">
-        <h1 class="clicked">PRODUCTS</h1>
+        <h1 class="clicked">PRODUCTS</h1> <!-- "PRODUCTS" is clicked -->
       </a>
       <a href="shopping-cart.html">
-        <h2 class="unclicked">CART</h2>
+        <h2 class="unclicked">CART</h2> <!-- "CART" is unclicked -->
       </a>
       <h3>Original cinnamon roll</h3>
     </section>
 
     <section class="products">
-        <img class="product-img detail-img" src="assets/products/original-cinnamon-roll.jpg" alt="product1" /> <img>
+        <img class="product-img detail-img" src="assets/products/original-cinnamon-roll.jpg" alt="product-detail" /> <img>
         <p>Customize our delicious, hand-making cinnamons to your liking!</p>
 
+        <!-- dropdown menus: -->
         <p>Glazing:</p>
-
-        <select id="dropdown">
+        <select class="dropdown"> 
             <option>Keep original</option>
             <option>Sugar milk</option>
             <option>Vanilla milk</option>
@@ -38,16 +38,17 @@
         </select>
 
         <p>Pack size:</p>
-
-        <select id="dropdown">
+        <select class="dropdown">
             <option>1</option>
             <option>3</option>
             <option>6</option>
             <option>12</option>
         </select>
 
-        <section class="inline-element">
-            <p class="inline-element bolded-text">$2.49 </p>
+        <!-- price and "add to cart" button -->
+        <!-- put these two elements to "inline-element" to make them inline later-->
+        <section class="detail-summary"> 
+            <p class="inline-element bolded-text">$2.49 </p> 
             <button class="inline-element bolded-text mybutton">Add to Cart</button>
         </section>
         
