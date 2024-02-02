@@ -1,0 +1,128 @@
+header{
+    border-bottom: 5px solid black; /* add a line at the buttom of the header */
+    padding: 30px;
+}
+
+/*----------------- overall display layout -----------------*/
+.headlines, .products{
+    font-family: Arial, Helvetica, sans-serif;
+    /* make the items align at the center: */
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/*----------------- images -----------------*/
+.logo{
+    width:400px;
+}
+.product-img{
+    width: 600px;
+    height: 600px;
+    display:flex;
+    align-items: center; /* make the image aligns at the center of the section */
+    border: 5px solid black;
+    margin:10px 10px 0px 10px;
+}
+.detail-img{
+    width: 400px;
+    height: 400px;
+}
+.cart-img{
+    width: 200px;
+    height: 200px;
+}
+
+/*----------------- headlines and paragraphs-----------------*/
+h1,h2{
+    font-size: 35px;
+    color: black;
+}
+h3{
+    font-size: 40px;
+    font-weight: 100;
+    padding: 10px;
+}
+/* headline of the product WITH an underline */
+h4{
+    font-size: 35px;
+    font-weight: 100;
+    margin: 10px;
+    color: black;
+    text-decoration: underline;
+}
+/* headline of the product*/
+h5{
+    font-size: 35px;
+    font-weight: 100;
+    margin: 10px;
+    color: black;
+}
+p{
+    font-size: 35px;
+    font-weight: 100;
+    margin: 20px;
+}
+
+/*----------------- links -----------------*/
+a{
+    text-decoration: none;
+}
+/* clicked link: bolder and highlighted in yellow*/
+.clicked{ 
+    background-color: yellow;
+    font-weight: 600;
+}
+/* unclicked link */
+.unclicked{
+    font-weight: 100;
+}
+
+/*----------------- each-product and its hover actions -----------------*/
+.each-product{
+    margin: 0 0 20px 0;
+} 
+.each-product:hover{
+    background-color: yellow; /* highlight in yellow when each-product is hovered */
+}
+.each-product:hover h4 {
+    font-weight:700; /* bold only h4 when each-product is hovered */
+}
+
+/*----------------- product detail -----------------*/
+.dropdown {
+    width: 250px; 
+    border: 4px solid;
+    font-size: 25px;
+    padding: 10px; 
+}
+/*price and "add to cart" button: */
+.detail-summary{ 
+    margin: 30px;
+}
+.bolded-text{
+    font-weight:600;
+}
+.mybutton {
+    border: 4px solid;
+    background-color: yellow;  
+    padding: 10px;
+    font-size: 25px; 
+}
+.inline-element{
+    display:inline;
+    margin: 20px;
+}
+
+/*----------------- shopping cart -----------------*/
+.remove-link{
+    font-size: 25px;
+    text-decoration: underline;
+}
+.cart-checkout{
+    border-top: 5px solid black; /* add a line at the top of the checkout section */
+    width: 600px; /* adjust the width of the checkout class to make the line wider */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
