@@ -1,0 +1,73 @@
+<!-- sh -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+
+  <head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-shopping-cart.css">
+  </head>
+  
+  <body>
+
+    <header>
+      <a href="./index.html"> <!-- logo links to product-gallery page-->
+        <img class="logo" src="../assets/logo/logo-01.svg" alt="Logo" /> <img>
+      </a>
+
+      <section class="header-elements">
+        <section class="header-options">
+          <a href="./index.html"> <!-- PRODUCTS links to product-gallery page-->
+            <h1 class="unclicked">PRODUCTS</h1> <!-- "PRODUCTS" is unclicked -->
+          </a>
+          <a href="./shopping-cart.html"> <!-- CART links to shopping-cart page when clicked-->
+            <h2 class="clicked" >CART</h2> <!-- "CART" is clicked -->
+          </a>
+        </section>
+        <p class="cart-badge">2</p>
+        <h3>Our hand-made cinnamon rolls</h3>
+      </section>
+    </header>
+
+    <section class="cart-products">
+
+      <section class="cart-each-product"> <!-- including img & info & price -->
+        <img class="product-img cart-img" src="../assets/products/original-cinnamon-roll.jpg" alt="cart1" /> <img>
+        <!-- information of the cart product -->
+        <section class="cart-product-info">
+          <h5>Original cinnamon roll</h5>
+          <h5>Glazing: Keep Original</h5>
+          <h5>Pack Size: 1</h5>
+        </section>
+        <p class="cart-product-price">$2.49</p>
+      </section>
+      <p class="bolded-text remove-link">Remove</p> <!-- turn to link later-->
+  
+      <section class="cart-each-product">
+        <img class="product-img cart-img" src="../assets/products/double-chocolate-cinnamon-roll.jpg" alt="cart2" /> <img>
+        <section class="cart-product-info">
+          <h5>Double-chocolate cinnamon roll</h5>
+          <h5>Glazing: Sugar milk</h5>
+          <h5>Pack Size: 6</h5>
+        </section>
+        <p class="cart-product-price">$27.45</p>
+      </section>
+      <p class="bolded-text remove-link">Remove</p> <!-- turn to link later-->
+
+      <!-- including total price * check-out button -->
+      <section class="cart-checkout"> 
+        <section class="checkout-price">
+          <p>Total</p>
+          <p class="cart-product-price">$29.94</p>
+        </section>
+        <button class="bolded-text check-out">Checkout</button>
+      </section>
+      
+    </section>
+
+    
+
+  </body>
+</html>
