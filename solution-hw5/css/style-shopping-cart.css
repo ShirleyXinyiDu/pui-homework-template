@@ -1,0 +1,55 @@
+.cart-products{
+    margin: 70px 0 0 400px;
+    width: 700px;
+
+}
+
+#cartRoll-template{
+    margin: 0;
+}
+
+/* including imge, info, and price */
+.cart-each-product{
+    width: 680px;
+    height: 150px;
+    display:flex;
+    flex-direction: row; /* img and info and price in row direction */
+    justify-content: space-between; 
+}
+.cart-product-info{
+    margin: 0 0 0 10px;
+    width: 350px;
+    display: flex;
+    flex-direction: column; /* info in column direction */
+    justify-content: center;
+}
+.cart-product-price{
+    margin: 0;
+    width: 100px;
+    display: flex;
+    justify-content: end; /* align on the right side */
+    align-items: center;
+}
+#remove-link{
+    margin: 80px 0 20px 0;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+/* including the price and checkout button */
+.cart-checkout{
+    margin: 0 0 0 400px;
+    width: 680px;
+    border-top: 5px solid black; /* add a line at the top of the checkout section */
+    display:flex;
+    flex-direction: column;
+    align-items: end; /* align on the right side */
+}
+.checkout-price{
+    display: flex;
+    gap: 275px;
+}
+button.check-out{
+    width: 180px;
+    height: 75px;
+}
