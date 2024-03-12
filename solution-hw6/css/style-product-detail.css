@@ -1,0 +1,40 @@
+/* both the image and the info */
+.detail-display{
+    height: 608px;
+    margin: 70px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.detail-info{
+    width: 370px;
+    margin: 0 0 0 5px;
+    display: flex;
+    flex-direction: column; /* information in column direction */
+    justify-content: space-between;
+}
+
+/* the dropdown selector */
+.dropdown {
+    margin: 0 20px 10px 20px;
+    width: 330px; 
+    font-size: 25px;
+    padding: 10px; 
+}
+
+/* price and "add to cart" button */
+.detail-summary{ 
+    margin: 20px 20px 0 20px;
+    height:55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+#detail-summary-price {
+    width: 100px;
+}
+#add-to-cart{
+    width: 250px;
+    height: 55px;
+}

@@ -1,0 +1,73 @@
+<!-- shopping cart -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+
+  <head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-shopping-cart.css">
+
+    <script defer src="js/rollsData.js"></script> 
+    <script defer src="js/options.js"></script> 
+    <script defer src="js/updateCart.js"></script>
+    <script defer src="js/updateBadge.js"></script>
+  </head>
+  
+  <body>
+
+    <header>
+      <a href="./index.html"> <!-- logo links to product-gallery page-->
+        <img class="logo" src="../assets/logo/logo-01.svg" alt="Logo" /> <img>
+      </a>
+
+      <section class="header-elements">
+        <section class="header-options">
+          <a href="./index.html"> <!-- PRODUCTS links to product-gallery page -->
+            <h1 class="unclicked">PRODUCTS</h1> <!-- "PRODUCTS" is unclicked -->
+          </a>
+          <a href="./shopping-cart.html"> <!-- CART links to shopping-cart page when clicked -->
+            <h2 class="clicked" >CART</h2> <!-- "CART" is clicked -->
+          </a>
+        </section>
+        <p class="cart-badge">0</p>
+        <h3>Shopping Cart</h3>
+      </section>
+    </header>
+
+    <!---------------------------------------------------------------------------------->
+    <div class="cart-products">
+
+      <template id="cartRoll-template">
+        <div class="cartRoll-info-price">
+          <div class="cart-each-product">
+            <img id="cartRoll-img" class="product-img" src="" alt="cart-roll" /> <img>
+
+            <div class="cart-product-info">
+              <h5 id="cartRoll-type">cinnamon roll</h5>
+              <h5 id="cartRoll-glazing">Glazing</h5>
+              <h5 id="cartRoll-packSize">Pack Size</h5>
+            </div>
+
+            <p class="cart-product-price">$27.45</p>
+          </div>
+
+          <p id="remove-link" class="bolded-text">Remove</p>
+        </div>
+      </template>
+
+    </div>
+
+    <!-------------------------------------------------------------------------->
+    <!-- including total price * check-out button -->
+    <div class="cart-checkout"> 
+      <div class="checkout-price">
+        <p>Total</p>
+        <p id="total-price" class="cart-product-price">$29.94</p>
+      </div>
+      <button class="bolded-text check-out">Checkout</button>
+    </div>
+
+  </body>
+</html>
