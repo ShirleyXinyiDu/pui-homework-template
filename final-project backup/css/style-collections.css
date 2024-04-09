@@ -1,0 +1,50 @@
+#my-favorites-posters, #seen-before-posters {
+    margin: 0 6vw;
+    padding: 0 45px;
+    padding-top: 125px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 19px; 
+    padding-bottom: 45px;
+}
+
+#my-favorites-posters img, #seen-before-posters img {
+    width: 236px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+
+#no-favorites-message, #no-seen-message {
+    /* align-items: center; */
+    height: 100vh;
+    position: absolute; /* Change to absolute positioning */
+    top: 0; /* Start at the top of the screen */
+    display: flex;
+    align-items: center;
+}
+
+
+
+#my-favorites-title, #seen-before-title {
+    /* background-color: aqua; */
+    height: 45px;
+    position: fixed;
+    top: 40px;
+    /* left: calc(3vw + 45px + 3vw); */
+    left: calc(6vw + 45px);
+    display: flex;
+    align-items: center; 
+    font-size: 19px;
+}
+
+header.my-favorites-header, header.seen-before-header {
+    /* padding: 40px 3vw 22px 3vw; */
+    padding: 40px 3vw 0 3vw;
+    position: fixed;
+    width: 100%;
+    height: 95px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px);
+}
+

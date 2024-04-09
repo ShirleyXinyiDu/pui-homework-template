@@ -1,0 +1,115 @@
+/* both the image and the info */
+
+
+
+.recommendations img{
+    width: 10vw;
+    opacity: 0.5;
+}
+
+
+#black-layer {
+    background-color: aqua;
+}
+
+.recommendations {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+    position: fixed;
+    /* left: calc(6vw + 45px); */
+    left: 11vw;
+}
+
+
+#poster-detail-img {
+    border: 1px solid rgb(255, 255, 255);
+    height: calc(100vh - 120px);
+    margin: 60px 40vw;
+    position: fixed;
+}
+
+
+.detail-display{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.detail-info{
+    /* background-color: rgb(8, 118, 118); */
+    width: 370px;
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column; 
+    gap: 4vh;
+    /* position: relative; */
+}
+
+.detail{
+    /* background-color: rgb(59, 92, 255); */
+    width: 370px;
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: end;
+    gap: 4vh;
+
+
+    height: calc(100vh - 120px);
+    position: fixed;
+
+    right: 200px;
+
+
+}
+
+#movie-title {
+    font-size: 27px;
+}
+
+#year-and-region {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+#credits {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+#credits p {
+    margin: 2px;
+}
+
+.poster-detail-icons {
+    /* background-color: rgb(123, 24, 124); */
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    position: relative;
+}
+
+#download-icon {
+    /* width: 25px; */
+    height: 24px;
+}
+
+.share-icons {
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    margin: 40px 4vw;
+    position: fixed;
+}
+
+.share-icons img {
+    width: 24px;
+}
+/*-------------------------------------------*/

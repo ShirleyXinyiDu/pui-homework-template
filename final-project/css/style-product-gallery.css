@@ -1,0 +1,22 @@
+.products{
+    margin: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 312px); /* Creates three columns of width 312px--width of each product */
+    gap: 5px 20px;
+    justify-content: center;
+}
+
+.each-product{
+    margin: 0 0 20px 0;
+    width: 312px; /* 285(img-width) + 3.5*2 (border) + 10*2 (hightlight offset) */
+    height: 440px;
+    display:flex;
+    flex-direction: column;
+} 
+.each-product:hover{
+    background-color: yellow; /* highlight in yellow when each-product is hovered */
+}
+h4:hover {
+    font-weight: bold; /* bolder when h4 is hovered */
+}
+

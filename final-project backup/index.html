@@ -1,0 +1,86 @@
+<!-- product gallery -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+
+  <head>
+    <title>Pinnacle Movie Prints</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- link to css-->
+    <link rel="stylesheet" href="css/style-product-gallery.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <!-- <script defer src="js/dominant-color.js"></script> -->
+    <script defer src="js/11.js"></script>
+    <script defer src="js/scraper.js"></script>
+
+    <script defer src="js/dominant-color.js"></script>
+    <script defer src="js/sort-by-color.js"></script>
+    <script defer src="js/posters.js"></script>
+    <script defer src="js/update-sorting.js"></script>
+    <script defer src="js/favorites-list.js"></script>
+    <!-- <script type="module" src="posters.js"></script> -->
+    <!-- <script defer src="js/movie-info.js"></script> -->
+    <!-- <script defer src="js/fetch.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  </head>
+  
+  <body>
+
+    <header class="home-gallery-header">
+
+      <div class="icons-and-search">
+        <div class="my-favorites-and-search">
+          <a href="./my-favorites.html">
+            <div class="icons">
+              <img id="my-favorites-icon" src="./assets/icons/star.svg" alt="my-favorites-icon"/><img>
+            </div>
+          </a>
+  
+          <div id="search-bar">
+            <div id="search-bar-elements">
+              <p id="search-text">Search by movie title, year, director...</p>
+              <img id="search-icon" src="./assets/icons/search.svg" alt="search-icon"/><img>
+            </div>
+          </div>
+        </div>
+  
+        <div class="sort-by">
+          <div id="sort-by-texts">
+            <p>Sort By: </p>
+            <p id="sorting-mode">Ranking</p>
+          </div>
+  
+          <div class="icons">
+            <img id="sorting-icon" src="./assets/icons/ranking.svg" alt="sorting-icon"/><img>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://www.bfi.org.uk/sight-and-sound/greatest-films-all-time" target="_blank">
+        <p id="poll-title">2022 Sight and Sound Greatest Films of All Time poll</p>
+      </a>
+      
+
+    </header>
+    
+    <div class="icons" id="gallery-circle">
+      <img id="create-my-gallery-icon" src="./assets/icons/gallery.svg" alt="create-my-gallery-icon"/><img>
+    </div>
+
+    <a href="./seen-before.html">
+      <div class="icons" id="seen-circle">
+        <img id="seen-before-icon" src="./assets/icons/seen.svg" alt="seen-before-icon"/><img>
+      </div>
+    </a>
+    
+
+
+    <div id="poster-gallery"></div>
+  </body>
+</html>
