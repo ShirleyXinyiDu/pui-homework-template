@@ -1,6 +1,7 @@
 // posters.js
 
-const folder = "./assets/posters";
+const folder = "./assets/icons";
+// const folder = "./assets/posters";
 const images = []; 
 
 $.ajax({
