@@ -29,3 +29,4 @@ function createAndAppendPosterElements(movies) {
   // you can call the function to populate the gallery.
   createAndAppendPosterElements(movies);
   
+  
