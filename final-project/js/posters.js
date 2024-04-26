@@ -45,6 +45,12 @@ fetch(folder)
   .catch(error => console.error("Failed to load folder content", error));
 
 
+  const imgElement1 = document.createElement("img");
+  imgElement1.src = "./assets/posters/1%20jeanne%20dielman.jpg";
+  document.querySelector("#poster-gallery").appendChild(imgElement1);
+
+
+  // $("#poster-gallery").append($("<img>").attr("src", "./assets/posters/1%20jeanne%20dielman.jpg"));
 
 function sortImagesByRanking(filenames) {
     return filenames.sort(function(a, b) {
