@@ -1,0 +1,22 @@
+.book.peel {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    background-color: #f0f0f0; 
+  }
+  
+  .peel-top, .peel-back, .peel-bottom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ccc; 
+  }
+  
+  .peel-back img {
+    width: 100%; 
+  }
+  

@@ -12,9 +12,65 @@ header.home-gallery-header {
     width: 100%;
     height: 145px;
     background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: aqua; */
     backdrop-filter: blur(10px); 
 }
 
+.my-favorites-and-search {
+    /* background-color: rgb(208, 255, 127); */
+    display:flex;
+    gap: 3vw;
+}
+
+
+/*----------------- search -----------------*/
+
+
+#search-bar-elements {
+    display: flex;
+    position: relative; /* Add relative positioning here */
+}
+
+#search-input {
+    width: 30vw;
+    height: 45px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    padding: 18px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    padding-right: 50px; /* Add padding to prevent text overlapping the icon */
+}
+
+#search-input:hover {
+    background-color: rgba(115, 115, 115, 0.3);
+}
+
+#search-icon {
+    position: absolute;
+    right: 18px; /* Set fixed right margin */
+    top: 50%; /* Align vertically in the middle */
+    transform: translateY(-50%); /* Center vertically */
+    width: 23px;
+}
+
+
+#search-input::placeholder {
+    color: white; /* Sets the placeholder text color to white */
+    /* opacity: 1;    */
+}
+
+#search-input:focus {
+    outline: none; /* Removes the blue border/outline on focus */
+}
+
+
+/*----------------- search -----------------*/
 
 
 .icons-and-search{
@@ -28,81 +84,51 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 200;
 }
-p{
+p {
     font-size: 14px;
     color: rgb(255, 255, 255);
 }
 
+
 #poll-title {
-    font-size: 17px;
-    display:flex;
-    justify-content: flex-end;
-    padding: 0 45px;
-    margin: 18px 3vw;
-    /* background-color: aqua; */
-    /* text-decoration: none;  */
+    text-decoration: none; 
+    color: rgb(255, 255, 255); 
+    position: absolute;
+    right: 0; 
+    margin: 0 calc(45px + 6vw);
+    
+    top: 95px;
 }
+
+#poll-title:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    text-decoration-color: rgb(108, 108, 108); 
+}
+
 
 a{
     text-decoration: none;
 }
 
-/* a #poll-title {
-    text-decoration: none;
-} */
-
-
-a:hover #poll-title {
-    text-decoration: underline;
-    text-decoration-color: rgb(108, 108, 108); 
-}
-
 
 .sort-by {
     /* background-color: aquamarine; */
-    display:flex;
+    display: flex;
     justify-content: flex-end;
     gap: 3vw;
+    position: absolute; /* Positioning it absolutely to the page */
+    right: 3vw; /* 6vw from the right side of the viewport */
 }
+
 #sort-by-texts {
-    display:flex;
+    display: flex;
     flex-direction: row;
-    align-items: center; 
+    align-items: center;
     gap: 0.5vw;
 }
 
-.my-favorites-and-search {
-    display:flex;
-    gap: 3vw;
-}
-#search-bar {
-    width: 30vw;
-    height: 45px;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 45px;
-    display: flex;
-    align-items: center; 
-}
-#search-bar-elements {
-    width: 30vw;
-    display: flex;
-    /* background-color: aquamarine; */
-    justify-content: space-between;
-}
 
-#search-text {
-    width: 24vw;
-    display: flex;
-    align-items: center; 
-    /* background-color: rgb(0, 167, 36); */
-    margin: 18px;
-}
 
-#search-icon {
-    /* background-color: rgb(0, 103, 167); */
-    width: 23px;
-    margin: 18px;
-}
 #my-favorites-icon {
     width: 25px;
     height: 25px;
@@ -133,7 +159,6 @@ a:hover #poll-title {
     left: 3vw;
 }
 
-
 .icons {
     width: 45px;
     height: 45px;
@@ -144,28 +169,76 @@ a:hover #poll-title {
     justify-content: center; 
 }
 
-#poster-gallery {
+.icons:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Common styles for all circles */
+/* .icons:hover::before {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 10px;
+    color: white;
+    z-index: 50;
+    font-size: 13px;
+  }
+  
+  #seen-circle:hover::before {
+    content: "Seen Before";
+  }
+  
+  #star-circle:hover::before {
+    background-color: aqua;
+    content: "My Favorites";
+  }
+  
+  #sorting-circle:hover::before {
+    content: "Sorting Mode";
+  }
+  
+  #gallery-circle:hover::before {
+    content: "Gallery";
+  } */
+
+
+/*----------------- posters -----------------*/
+
+/* #poster-gallery {
     margin: 0 6vw;
     padding: 0 45px;
     padding-top: 145px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
-    /* align-items: center;  */
-    /* gap: 2vw;  */
     gap: 19px; 
+    padding-bottom: 45px;
+} */
+
+/* #poster-gallery img {
+    width: 19.5vw;
+    border: 1px solid rgb(255, 255, 255);
+} */
+
+
+#poster-gallery {
+    margin: 0 calc(6vw + 45px);
+    padding-top: 145px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between;  */
+    justify-content: center; 
+    gap: 1.5vw; 
     padding-bottom: 45px;
 }
 
+
 #poster-gallery img {
-    width: 19.5vw;
-    /* width: 300px; */
-    /* width: 235px; */
+    width: calc((100vw - 12vw - 90px - (1.5vw)*3)*0.25);
     border: 1px solid rgb(255, 255, 255);
 }
-
-
-
 
 
 #back-icon {
@@ -180,3 +253,115 @@ a:hover #poll-title {
 }
 
 
+
+
+#popup-container {
+    display:none; 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    width:100vw; 
+    justify-content:center; 
+    align-items:center; 
+    /* background-color:rgba(0,0,0,0.5);  */
+    backdrop-filter:blur(10px);
+}
+
+#popup-content {
+    width: 100vw;
+    height: 100vh;
+    /* padding: 125px 3vw 40px;  */
+    position:relative; 
+    background-color:transparent; 
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+#popup-posters {
+    padding: 125px 3vw 125px 3vw; /* Top, right, bottom, and left padding set to 3vw for the right side */
+    display: flex;
+    gap: 1.5vw;
+    overflow-x: auto; /* Ensure that the overflow content can be scrolled horizontally */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+#popup-posters img {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.search-result-header {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    /* padding: 3vw; */
+    /* width: calc(100vw - 6vw); */
+
+    height: 125px;
+    /* background-color:rgba(255, 255, 255, 0.5); 
+    backdrop-filter:blur(50px); */
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+#search-result-title {
+    font-size: 19px;
+    margin: 3vw;
+}
+
+#close-circle {
+    position:fixed; 
+    right: 0vw;
+    margin: 3vw;
+    /* top:40px; 
+    right:3vw;  */
+    cursor:pointer;
+}
+
+#close-icon {
+    width: 40px;
+}
+
+/* #rearch-result-title {
+    width: 100vw;
+    height: 125px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+} */
+
+
+
+
+/* 
+header.search-result-header {
+    padding: 40px 3vw 0 3vw;
+    position: fixed;
+    width: 100%;
+    height: 95px;
+    background-color: cyan;
+    backdrop-filter: blur(10px);
+}
+ */
+
+
+/* CSS to target the input field when it is autofilled */
+
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px black inset !important;
+    -webkit-text-fill-color: white !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 200 !important;
+    font-size: 14px !important;
+} */
+
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px black inset !important;
+    -webkit-text-fill-color: white !important;
+}

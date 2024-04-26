@@ -27,7 +27,8 @@ function updateFavoritesDisplay() {
             imgElement.classList.add('favorites-img');
 
             // Create a link element that leads to a detail page with the image as a parameter
-            const detailPageUrl = "./poster-detail.html?imageUrl=" + encodeURIComponent(imagePath);
+            const detailPageUrl = "./poster-detail.html?imageUrl=" + encodeURIComponent(imagePath) + "&from=myFavorites";
+            // const detailPageUrl = "./poster-detail.html?imageUrl=" + encodeURIComponent(imagePath);
             const linkElement = document.createElement('a');
             linkElement.href = detailPageUrl;
             linkElement.appendChild(imgElement); // Append the <img> to the <a>

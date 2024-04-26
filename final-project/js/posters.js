@@ -1,3 +1,6 @@
+// const sortingIcon = document.getElementById('sorting-icon');
+
+
 const folder = "assets/posters";
 const images = [];
 
@@ -13,8 +16,8 @@ fetch(folder)
     for (let i = 0; i < links.length; i++) {
       let val = links[i].getAttribute("href");
       if (val.match(/\.(jpg)$/)) {  // Checking if the link is for a .jpg image
-        console.log('val');
-        console.log(val);
+        // console.log('val');
+        // console.log(val);
         images.push(val);
         // images.push(folder + val);  // Appending the full path to the images array
       }
@@ -22,7 +25,17 @@ fetch(folder)
 
     // images.sort();  // Sorting images array; modify sorting logic as needed
 
-    sortImagesByTitle(images);
+
+    // if (sortingIcon.src.includes("ranking.svg")) {
+    //   sortImagesByRanking(images);
+    //   console.log('sortImagesByRanking');
+    //   console.log(images);
+    // } else if (sortingIcon.src.includes("title.svg")) {
+    //   console.log('sortImagesByTitle');
+    //   console.log(images);
+    // } 
+
+    sortImagesByRanking(images);
     console.log(images);
 
     images.forEach(function(val) {
@@ -41,7 +54,8 @@ fetch(folder)
   .catch(error => console.error("Failed to load folder content", error));
 
 
-function sortImagesByTitle(filenames) {
+
+function sortImagesByRanking(filenames) {
     return filenames.sort(function(a, b) {
         // Extract the numerical part of the filename after the last '/' and decode it
         let numberA = parseInt(decodeURIComponent(a).match(/(\d+)/)[0], 10);
@@ -51,3 +65,7 @@ function sortImagesByTitle(filenames) {
         return numberA - numberB;
     });
 }
+
+
+
+
