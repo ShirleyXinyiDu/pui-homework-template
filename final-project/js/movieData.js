@@ -19,7 +19,7 @@ const movies = {
         "cast": "James Stewart, Kim Novak, Barbara Bel Geddes",
         "time": "128 minutes"
     },
-    "3 citizen kane.jpg": {
+    "3 Citizen Kane.jpg": {
         "title": "Citizen Kane",
         "year": 1941,
         "region": "USA",
