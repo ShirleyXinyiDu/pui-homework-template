@@ -119,7 +119,7 @@ const movies = {
         "cast": "Marlon Brando, Al Pacino, James Caan",
         "time": "175 minutes"
     },
-    "13 La Règle du jeu.jpg": {
+    "13 La Regle du jeu.jpg": {
         "title": "La Règle du jeu",
         "year": 1939,
         "region": "France",
@@ -789,7 +789,7 @@ const movies = {
         "cast": "Chang Chen, Lisa Yang, Zhang Guozhu",
         "time": "237 minutes"
     },
-    "80 Céline and Julie Go Boating.jpg": {
+    "80 Celine and Julie Go Boating.jpg": {
         "title": "Céline and Julie Go Boating",
         "year": 1974,
         "region": "France",
@@ -1349,7 +1349,7 @@ const movies = {
         "cast": "James Stewart, Donna Reed, Lionel Barrymore",
         "time": "129 minutes"
     },
-    "136 la ciénaga.jpg": {
+    "136 la cienaga.jpg": {
         "title": "La ciénaga",
         "year": 2001,
         "region": "Argentina, USA, Japan, France, Switzerland, Spain, Brazil",
