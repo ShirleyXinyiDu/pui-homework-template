@@ -379,7 +379,7 @@ const movies = {
         "cast": "Marilyn Monroe, Tony Curtis, Jack Lemmon",
         "time": "120 minutes"
     },
-    "39 À bout de souffle.jpg": {
+    "39 A bout de souffle.jpg": {
         "title": "À bout de souffle",
         "year": 1960,
         "region": "France",
