@@ -29,7 +29,8 @@ $.ajax({
             $("#poster-gallery").append(linkElement);
         });
 
-
+        $("#poster-gallery").append($("<img>").attr("src", "./assets/posters/1%20jeanne%20dielman.jpg"));
+        // /pui-homework-template/final-project/assets/posters/1%20jeanne%20dielman.jpg
     }
 });
 
