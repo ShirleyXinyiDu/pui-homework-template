@@ -1,9 +1,9 @@
 // const sortingIcon = document.getElementById('sorting-icon');
 
 
-// const folder = "assets/posters";
+const folder = "assets/posters";
 
-const folder = "assets/icons";
+// const folder = "assets/icons";
 const images = [];
 
 // Using fetch to load the content of the folder
