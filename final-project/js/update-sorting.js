@@ -1,15 +1,53 @@
 const sortingModeText = document.getElementById('sorting-mode');
 const sortingIcon = document.getElementById('sorting-icon');
+const imagesContainer = document.querySelector('#poster-gallery');
 const sortingCircle = document.getElementById('sorting-circle');
-const imagesContainer = document.querySelector('#poster-gallery'); // Adjust if the actual ID is different
 
-// Importing the sortImagesByTitle function from the sort-by-title.js script
-// Make sure this import aligns with how you are structuring your scripts.
-// import { sortImagesByTitle } from './sort-by-title.js';
+// Function to sort movies by title
+function sortMoviesByTitle(movies) {
+  return Object.entries(movies).sort(([key1, val1], [key2, val2]) => {
+    return val1.title.localeCompare(val2.title);
+  });
+}
+
+// Function to sort movies by year
+function sortMoviesByYear(movies) {
+  return Object.entries(movies).sort(([key1, val1], [key2, val2]) => {
+    return val1.year - val2.year;
+  });
+}
+
+// Function to sort movies by the filename (assuming it has ranking information)
+function sortMoviesByRanking(movies) {
+  return Object.entries(movies).sort(([key1], [key2]) => {
+    let rank1 = parseInt(key1.split(' ')[0]);
+    let rank2 = parseInt(key2.split(' ')[0]);
+    return rank1 - rank2;
+  });
+}
+
+// Function to update the images display based on the sorted array
+function updateImagesDisplay(sortedArray) {
+  imagesContainer.innerHTML = ''; // Clear current images
+  sortedArray.forEach(([imageName, movie]) => {
+    const imgElement = document.createElement("img");
+    imgElement.src = "./assets/posters/" + imageName;
+    imgElement.alt = movie.title; // Optional: add alt text for accessibility
+
+    const linkElement = document.createElement("a");
+    linkElement.href = "./poster-detail.html?imageUrl=" + encodeURIComponent("./assets/posters/" + imageName);
+    linkElement.appendChild(imgElement);
+
+    imagesContainer.appendChild(linkElement);
+  });
+}
+
+
 
 sortingCircle.addEventListener('click', updateSortingMode);
 
 function updateSortingMode() {
+    let sortedMovies;
     if (sortingIcon.src.includes("ranking.svg")) {
         sortingIcon.src = "./assets/icons/color.jpg";
         sortingIcon.style.width = '45px';
@@ -26,96 +64,20 @@ function updateSortingMode() {
         sortingIcon.style.borderRadius = '0';
         sortingModeText.innerText = "Title";
         // Call to sort images by title when this icon is selected
-        fetchImagesAndSortByTitle();
+        sortedMovies = sortMoviesByTitle(movies);
 
     } else if (sortingIcon.src.includes("title.svg")) {
         sortingIcon.src = "./assets/icons/year.svg";
         sortingIcon.style.width = '21.5px'; // Reset width to original
         sortingModeText.innerText = "Year";
-        fetchImagesAndSortByYear();
+        sortedMovies = sortMoviesByYear(movies);
+
     } else if (sortingIcon.src.includes("year.svg")) {
         sortingIcon.src = "./assets/icons/ranking.svg";
         sortingIcon.style.width = '22px'; // Reset width to original
-        sortingIcon.style.height = '22px'; // Reset height to original
         sortingModeText.innerText = "Ranking";
-        fetchImagesAndSortByRanking();
+        sortedMovies = sortMoviesByRanking(movies);
     }
+    updateImagesDisplay(sortedMovies);
 };
 
-function fetchImagesAndSortByTitle() {
-    // Fetching images from your source, sorting them, and updating the display
-    fetch(folder)
-    .then(response => response.text())
-    .then(data => {
-        const parser = new DOMParser();
-        const htmlDocument = parser.parseFromString(data, "text/html");
-        let images = [];
-        const links = htmlDocument.getElementsByTagName("a");
-        for (let i = 0; i < links.length; i++) {
-            let val = links[i].getAttribute("href");
-            if (val.match(/\.(jpg)$/)) {
-                images.push(val);
-            }
-        }
-        images = sortImagesByTitle(images); // Sort images by title
-        updateImagesDisplay(images);
-    })
-    .catch(error => console.error("Failed to load folder content", error));
-}
-
-function updateImagesDisplay(sortedFilenames) {
-    imagesContainer.innerHTML = ''; // Clear current images
-    sortedFilenames.forEach(function(filename) {
-        const imgElement = document.createElement("img");
-        imgElement.src = filename;
-
-        const linkElement = document.createElement("a");
-        linkElement.href = "./poster-detail.html?imageUrl=" + encodeURIComponent(filename);
-        linkElement.appendChild(imgElement);
-
-        imagesContainer.appendChild(linkElement);
-    });
-}
-
-
-function fetchImagesAndSortByYear() {
-    // Fetching images from your source, sorting them, and updating the display
-    fetch(folder)
-    .then(response => response.text())
-    .then(data => {
-        const parser = new DOMParser();
-        const htmlDocument = parser.parseFromString(data, "text/html");
-        let images = [];
-        const links = htmlDocument.getElementsByTagName("a");
-        for (let i = 0; i < links.length; i++) {
-            let val = links[i].getAttribute("href");
-            if (val.match(/\.(jpg)$/)) {
-                images.push(val);
-            }
-        }
-        images = sortImagesByYear(images); // Sort images by title
-        updateImagesDisplay(images);
-    })
-    .catch(error => console.error("Failed to load folder content", error));
-}
-
-function fetchImagesAndSortByRanking() {
-    // Fetching images from your source, sorting them, and updating the display
-    fetch(folder)
-    .then(response => response.text())
-    .then(data => {
-        const parser = new DOMParser();
-        const htmlDocument = parser.parseFromString(data, "text/html");
-        let images = [];
-        const links = htmlDocument.getElementsByTagName("a");
-        for (let i = 0; i < links.length; i++) {
-            let val = links[i].getAttribute("href");
-            if (val.match(/\.(jpg)$/)) {
-                images.push(val);
-            }
-        }
-        images = sortImagesByRanking(images); // Sort images by title
-        updateImagesDisplay(images);
-    })
-    .catch(error => console.error("Failed to load folder content", error));
-}
