@@ -6,7 +6,8 @@ function createAndAppendPosterElements(movies) {
     for (const imageName in movies) {
       if (movies.hasOwnProperty(imageName)) {
         const val = imageName; // The image name is the key in the movies object
-        const detailPageUrl = "./poster-detail.html?imageUrl=" + encodeURIComponent(val);
+        // const detailPageUrl = "./poster-detail.html?imageUrl=" + encodeURIComponent(val);
+        const detailPageUrl = "./poster-detail.html?imageUrl=" + encodeURIComponent("./assets/posters/" + val);
   
         // Create img element for poster
         const imgElement = document.createElement("img");
