@@ -12,7 +12,19 @@
     <script defer src="js/movieData.js"></script>
     <script defer src="js/detail.js"></script>
     <script defer src="js/update-detail-icons.js"></script>
-    <script defer src="js/posters.js"></script>
+    <script defer src="js/sorting-functions.js"></script>
+    <!-- <script defer src="js/update-sorting.js"></script> -->
+    <script defer src="js/store.js"></script>
+
+    <!-- <script defer src="js/posters.js"></script> -->
+    <script defer src="js/click-back.js"></script>
+
+    
+
+    <!-- <script defer src="js/before-after.js"></script> -->
+
+
+
     <!-- <script defer src="js/update-rec.js"></script> -->
     <!-- <script defer src="js/my-favorites.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -22,21 +34,43 @@
   <body>
 
     <header>
-      <a href="javascript:window.history.back();">
+      <!-- <a href="javascript:window.history.back();">
         <div class="icons" id="back-circle">
           <img id="back-icon" src="./assets/icons/back.svg" alt="back-icon"/><img>
         </div>
+      </a> -->
+
+
+      <a id="back-link" href="#">
+        <div class="icons" id="back-circle">
+          <img id="back-icon" src="./assets/icons/back.svg" alt="back-icon"/>
+        </div>
       </a>
+
+      
     </header>
-    
+
+    <a href="">
+      <img id="back-icon" class="before" src="./assets/icons/back.svg" alt="back-icon"/><img>
+    </a>
+
+    <a href="">
+      <img id="back-icon" class="after" src="./assets/icons/back.svg" alt="back-icon"/><img>
+    </a>
+
+    <div class="source">
+      <p>Film Information Source</p>
+      <p>Sight and Sound Greatest Films of All Time, Wikipedia</p>
+    </div>
+
     <div class="detail-display">
 
-      <div class="recommendations">
+      <!-- <div class="recommendations">
         <img id="rec1" src="./assets/posters/28 daisies.jpg" alt="recommend1" /> <img>
         <img id="rec2" src="./assets/posters/29 taxi driver.jpg" alt="recommend2" /> <img>
         <img id="rec3" src="./assets/posters/31 mirror.jpg" alt="recommend3" /> <img>
         <img id="rec4" src="./assets/posters/32 psycho.jpg" alt="recommend4" /> <img>
-      </div>
+      </div> -->
 
       
       <img id="poster-detail-img" src="" alt="poster-detail" /> <img>
@@ -82,13 +116,14 @@
         </div>
 
       </div>
+      
 
-      <div class="share-icons">
+      <!-- <div class="share-icons">
         <img id="ins-icon" src="./assets/icons/ins.svg" alt="ins-icon"/><img>
         <img id="twitter-icon" src="./assets/icons/twitter.svg" alt="twitter-icon"/><img>
         <img id="email-icon" src="./assets/icons/email.svg" alt="email-icon"/><img>
         <img id="link-icon" src="./assets/icons/link.svg" alt="link-icon"/><img>
-      </div>
+      </div> -->
 
       </div>
 

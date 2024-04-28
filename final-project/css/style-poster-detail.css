@@ -2,70 +2,65 @@
 
 
 
-.recommendations img{
+/* .recommendations img{
     width: 10vw;
     opacity: 0.5;
 }
+ */
 
-
-#black-layer {
+/* #black-layer {
     background-color: aqua;
-}
+} */
 
-.recommendations {
+/* .recommendations {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2vh;
     position: fixed;
-    /* left: calc(6vw + 45px); */
     left: 11vw;
-}
+} */
 
 
 #poster-detail-img {
     border: 1px solid rgb(255, 255, 255);
     height: calc(100vh - 120px);
-    margin: 60px 40vw;
     position: fixed;
+    right: 49%;
 }
 
 
 .detail-display{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 20px;
-}
-
-.detail-info{
-    /* background-color: rgb(8, 118, 118); */
-    width: 370px;
-    margin: 60px 0;
-    display: flex;
-    flex-direction: column; 
-    gap: 4vh;
-    /* position: relative; */
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    align-items: center;
 }
 
 .detail{
     /* background-color: rgb(59, 92, 255); */
-    width: 370px;
-    margin: 60px 0;
     display: flex;
     flex-direction: column; 
     justify-content: end;
     gap: 4vh;
-
-
     height: calc(100vh - 120px);
     position: fixed;
-
-    right: 200px;
-
+    left: 55%;
 
 }
+
+.detail-info{
+    /* background-color: rgb(8, 118, 118); */
+    width: 24vw;
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column; 
+    gap: 4vh;
+}
+
+
 
 #movie-title {
     font-size: 27px;
@@ -87,6 +82,23 @@
     margin: 2px;
 }
 
+/*-------------------------------------------*/
+
+.before{
+    /* background-color: blueviolet; */
+    position: fixed;
+    left: 10vw;
+    top: 50%;
+}
+
+.after{
+    /* background-color: blueviolet; */
+    position: fixed;
+    right: 10vw;
+    top: 50%;
+    transform: rotate(180deg); 
+}
+
 .poster-detail-icons {
     /* background-color: rgb(123, 24, 124); */
     display: flex;
@@ -100,8 +112,7 @@
     height: 24px;
 }
 
-.share-icons {
-    /* background-color: aqua; */
+/* .share-icons {
     display: flex;
     flex-direction: column;
     gap: 2.5vh;
@@ -111,5 +122,21 @@
 
 .share-icons img {
     width: 24px;
-}
+} */
 /*-------------------------------------------*/
+
+.source {
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* justify-content: flex-end; */
+    position: absolute;
+    top: 60px;
+    right: 4vw;
+    gap: 4px;
+}
+
+.source p{
+    font-size: 13px;
+}

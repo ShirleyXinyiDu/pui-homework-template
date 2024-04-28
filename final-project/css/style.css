@@ -279,8 +279,11 @@ a{
 }
 
 #popup-posters {
+    /* background-color: antiquewhite; */
+    height: 100vh;
     padding: 125px 3vw 125px 3vw; /* Top, right, bottom, and left padding set to 3vw for the right side */
     display: flex;
+    align-items: center;
     gap: 1.5vw;
     overflow-x: auto; /* Ensure that the overflow content can be scrolled horizontally */
     box-sizing: border-box; /* Ensure padding is included in the width */
@@ -288,6 +291,8 @@ a{
 
 #popup-posters img {
     border: 1px solid rgb(255, 255, 255);
+    width: 22vw;
+    /* padding: 125px; */
 }
 
 .search-result-header {

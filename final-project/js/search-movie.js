@@ -13,28 +13,73 @@ document.addEventListener('DOMContentLoaded', () => {
     function enableScroll() {
       body.style.overflow = 'auto';
     }
-  
+
+    // function showPopup(matchedMovies, searchText) {
+    //   const popupPosters = document.getElementById('popup-posters');
+    //   popupPosters.innerHTML = '';
+    
+    //   if (Object.keys(matchedMovies).length > 0) {
+    //     Object.keys(matchedMovies).forEach((imageFileName) => {
+    //       const movie = matchedMovies[imageFileName];
+    
+    //       // Create the img element
+    //       const img = document.createElement('img');
+    //       img.src = `assets/posters/${imageFileName}`;
+    //       img.alt = movie.title; // Use movie title as alt text for accessibility
+    
+    //       // Create the anchor element wrapping the image
+    //       const link = document.createElement('a');
+    //       // link.href = `./poster-detail.html?imageUrl=${encodeURIComponent("./assets/posters/" + imageFileName)}`;
+    //       link.href = `./poster-detail.html?imageUrl=${encodeURIComponent("./assets/posters/" + imageFileName)}`;
+    //       link.appendChild(img); // Append the image to the anchor
+    
+    //       // Append the anchor element to the popupPosters
+    //       popupPosters.appendChild(link);
+    //     });
+    //     searchResultTitle.textContent = searchText; // Display the search text
+    //   } else {
+    //     searchResultTitle.textContent = 'No results'; // Display 'No results' if nothing is found
+    //   }
+    
+    //   popupContainer.style.display = 'flex';
+    //   disableScroll(); // Ensure this function exists to prevent scrolling when the popup is displayed
+    // }
+
     function showPopup(matchedMovies, searchText) {
       const popupPosters = document.getElementById('popup-posters');
       popupPosters.innerHTML = '';
   
       if (Object.keys(matchedMovies).length > 0) {
-        Object.keys(matchedMovies).forEach((imageFileName) => {
-          const movie = matchedMovies[imageFileName];
-          const img = document.createElement('img');
-          img.src = `assets/posters/${imageFileName}`;
-          img.style.width = '25%';
-          img.style.height = 'auto';
-          popupPosters.appendChild(img);
-        });
-        searchResultTitle.textContent = searchText; // Display the input text
+          Object.keys(matchedMovies).forEach((imageFileName) => {
+              const movie = matchedMovies[imageFileName];
+  
+              // Create the img element
+              const img = document.createElement('img');
+              img.src = `assets/posters/${imageFileName}`;
+              img.alt = movie.title; // Use movie title as alt text for accessibility
+  
+              // Create the anchor element wrapping the image
+              const link = document.createElement('a');
+              link.href = `./poster-detail.html?imageUrl=${encodeURIComponent("assets/posters/" + imageFileName)}`;
+              link.appendChild(img); // Append the image to the anchor
+  
+              // Append the anchor element to the popupPosters
+              popupPosters.appendChild(link);
+  
+              // Add click listener to sort movies based on the clicked poster
+              link.addEventListener('click', () => {
+                  sortMoviesBasedOnPopup(movie);
+              });
+          });
+          searchResultTitle.textContent = searchText; // Display the search text
       } else {
-        searchResultTitle.textContent = 'No results'; // Display 'No results' if nothing is found
+          searchResultTitle.textContent = 'No results'; // Display 'No results' if nothing is found
       }
   
       popupContainer.style.display = 'flex';
-      disableScroll();
-    }
+      disableScroll(); // Ensure this function exists to prevent scrolling when the popup is displayed
+  }
+    
   
     searchIcon.addEventListener('click', () => {
       const searchText = searchInput.value.toLowerCase();
@@ -67,6 +112,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+// Function to sort and display movies based on the clicked poster
+function sortMoviesBasedOnPopup(clickedMovie) {
+    // Assuming movies are globally accessible or fetched accordingly
+    const sortedMovies = sortMoviesByTitle(movies); // Adjust the sorting function as necessary
+    const clickedMovieIndex = sortedMovies.findIndex(([_, movie]) => movie.title === clickedMovie.title);
+    const sortedMovieNames = sortedMovies.slice(clickedMovieIndex).map(([_, movie]) => movie.title);
+
+    // Update the display or handle it as needed
+    console.log('Sorted movies starting from clicked:', sortedMovieNames);
+}
+
+  
 
 // // Get the input field
 // var inputField = document.querySelector('#search-input'); // Replace with the correct selector for your input field
