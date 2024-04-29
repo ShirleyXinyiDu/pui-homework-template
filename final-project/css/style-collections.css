@@ -45,7 +45,7 @@
 
 
 
-#my-favorites-title, #seen-before-title {
+#my-favorites-title, #seen-before-title, #about-title {
     /* background-color: aqua; */
     height: 45px;
     position: fixed;
