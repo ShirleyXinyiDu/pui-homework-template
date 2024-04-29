@@ -1,0 +1,31 @@
+header.about-header {
+    height: 125px;
+    position: fixed;
+    width: 100%;
+    /* height: 95px; */
+    /* background-color: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(10px); */
+}
+
+#web-name {
+    font-size: 40px;
+    position: absolute;
+    top: 25vh;
+    right: 10vw;
+}
+
+#about-text {
+    position: absolute;
+    top: 40vh;
+    right: 10vw;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+#about-text p {
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 20px;
+}

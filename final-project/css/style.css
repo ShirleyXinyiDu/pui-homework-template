@@ -139,13 +139,13 @@ a{
     width: 22px;
     height: 22px;
 }
-#create-my-gallery-icon{
-    width: 21px;
-    height: 21px;
+#about-icon{
+    width: 24px;
+    /* height: 25px; */
     position: absolute;
 }
 
-#gallery-circle {
+#about-circle {
     position: fixed;
     bottom: 40px;
     right: 3vw;
