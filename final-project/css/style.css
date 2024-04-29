@@ -285,12 +285,27 @@ a{
     overflow-x: auto; /* Ensure that the overflow content can be scrolled horizontally */
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
+/* 
+#popup-posters img {
+    border: 1px solid rgb(255, 255, 255);
+    width: 22vw;
+} */
+
 
 #popup-posters img {
     border: 1px solid rgb(255, 255, 255);
     width: 22vw;
-    /* padding: 125px; */
+    transition: transform 0.8s ease-in-out, filter 0.8s ease-in-out;
+    display: block;
+    transform-origin: center;
 }
+
+#popup-posters img:hover {
+    animation: breathingEffect 2s ease-in-out infinite;
+}
+
+
+
 
 .search-result-header {
     position: absolute;
