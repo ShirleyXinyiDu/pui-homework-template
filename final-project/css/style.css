@@ -288,11 +288,6 @@ a{
     overflow-x: auto; /* Ensure that the overflow content can be scrolled horizontally */
     box-sizing: border-box; /* Ensure padding is included in the width */
 }
-/* 
-#popup-posters img {
-    border: 1px solid rgb(255, 255, 255);
-    width: 22vw;
-} */
 
 
 #popup-posters img {
@@ -384,5 +379,28 @@ input:-webkit-autofill {
         margin: 15px 0 20px 0; 
     }
 
+
+    #popup-container {
+        width: 100%;
+    }
+    
+    #popup-content {
+        width: 100%;
+    }
+    
+    #popup-posters {
+        /* background-color: aqua; */
+        margin: 0 15%;
+        display: flex;
+        flex-direction: column; 
+
+
+    }
+
+    #popup-posters img{
+        width: 100%; 
+        margin: 0px 0 40px 0; 
+
+    }
 
 }
