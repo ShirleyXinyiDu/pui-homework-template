@@ -9,10 +9,29 @@
     padding-bottom: 45px;
 }
 
-#my-favorites-posters img, #seen-before-posters img {
+/* #my-favorites-posters img, #seen-before-posters img {
     width: calc((100vw - 12vw - 90px - 4.5vw)*0.25);
     border: 1px solid rgb(255, 255, 255);
+} */
+
+#my-favorites-posters img, #seen-before-posters img {
+    width: calc((100vw - 12vw - 90px - (1.5vw)*3)*0.25);
+    height: auto;
+    border: 1px solid rgb(255, 255, 255);
+    transition: transform 0.8s ease-in-out, filter 0.8s ease-in-out;
+    display: block;
+    transform-origin: center;
 }
+
+#seen-before-posters img:hover {
+    animation: breathingEffect 2s ease-in-out infinite;
+}
+
+#my-favorites-posters img:hover {
+    animation: breathingEffect 2s ease-in-out infinite;
+}
+
+
 
 
 #no-favorites-message, #no-seen-message {

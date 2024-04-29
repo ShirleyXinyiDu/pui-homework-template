@@ -15,7 +15,12 @@
     <script defer src="js/sorting-functions.js"></script>
     <script defer src="js/click-back.js"></script>
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+
+    <script defer src="js/animate.js"></script>
 
   </head>
   
@@ -45,33 +50,33 @@
       <div class="detail">
 
         <div class="detail-info">
-          <p id="movie-title"></p>
+          <p id="movie-title" class="animated"></p>
 
           <div id="year-and-region">
-            <p id="year"></p>
-            <p id="region"></p>
+            <p id="year" class="animate-paragraph"></p>
+            <p id="region" class="animate-paragraph"></p>
           </div>
 
           <div id="credits">
             <div id="director">
-              <p>Directed by</p>
-              <p id="director-detail"></p>
+              <p class="animate-paragraph">Directed by</p>
+              <p class="animate-paragraph" id="director-detail"></p>
             </div>
             <div id="producer">
-              <p>Produced by</p>
-              <p id="producer-detail"></p>
+              <p class="animate-paragraph">Produced by</p>
+              <p class="animate-paragraph" id="producer-detail"></p>
             </div>
             <div id="writer">
-              <p>Written by</p>
-              <p id="writer-detail"></p>
+              <p class="animate-paragraph">Written by</p>
+              <p class="animate-paragraph" id="writer-detail"></p>
             </div>
             <div id="cast">
-              <p>Featuring</p>
-              <p id="cast-detail"></p>
+              <p class="animate-paragraph">Featuring</p>
+              <p class="animate-paragraph" id="cast-detail"></p>
             </div>
             <div id="time">
-              <p>Running time</p>
-              <p id="time-detail"></p>
+              <p class="animate-paragraph">Running time</p>
+              <p class="animate-paragraph" id="time-detail"></p>
             </div>
           </div>
         </div>
