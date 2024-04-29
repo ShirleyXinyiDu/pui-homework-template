@@ -66,3 +66,20 @@ header.my-favorites-header, header.seen-before-header {
     backdrop-filter: blur(10px);
 }
 
+
+
+@media (max-width: 700px) {
+    #poster-gallery {
+        margin: 0 15%;
+        display: flex;
+        flex-direction: column; 
+    }
+    
+    #my-favorites-posters img, #seen-before-posters img {
+        width: 100%; 
+        margin: 15px 0 20px 0; 
+    }
+
+
+}
+
