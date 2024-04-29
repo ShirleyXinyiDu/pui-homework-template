@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+header {
+    z-index: 10; 
+}
 
 header.home-gallery-header {
     /* padding: 40px 3vw 22px 3vw; */
@@ -251,6 +254,7 @@ a{
 
 
 #popup-container {
+    z-index: 15;
     display:none; 
     position:fixed; 
     top:0; 
