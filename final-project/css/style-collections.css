@@ -63,5 +63,10 @@ header.my-favorites-header, header.seen-before-header {
         margin: 15px 0 20px 0; 
     }
 
+    #no-favorites-message, #no-seen-message {
+        width: 60%;
+        text-align: center;
+    }
+
 }
 
