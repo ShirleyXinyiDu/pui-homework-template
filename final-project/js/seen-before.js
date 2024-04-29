@@ -1,30 +1,4 @@
 
-// const images = [];
-
-
-// images.forEach((imagePath) => {
-//     // Create an <img> element
-//     const imgElement = document.createElement('img');
-//     imgElement.src = imagePath;
-//     imgElement.alt = 'my-favorites-poster';
-//     imgElement.classList.add('seen-img');
-    
-//     // Create an <a> element
-//     const linkElement = document.createElement('a');
-//     // Set the href attribute of <a> to the imagePath or another URL
-//     linkElement.href = "./poster-detail.html"; // Or any URL you want the image to link to
-//     // Optionally, if you want the link to open in a new tab
-//     // linkElement.target = '_blank';
-    
-//     // Append the <img> to the <a>
-//     linkElement.appendChild(imgElement);
-    
-//     // Finally, append the <a> to the list
-//     seenBeforeList.appendChild(linkElement);
-// });
-
-
-
 
 const seenBeforeList = document.getElementById('seen-before-posters');
 const noSeenTextId = 'no-seen-message'; // A unique ID for the message element

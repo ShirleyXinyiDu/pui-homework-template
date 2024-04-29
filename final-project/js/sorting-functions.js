@@ -25,17 +25,22 @@ function sortMoviesByTitle(movies) {
 
 // Function to update the images display based on the sorted array
 function updateImagesDisplay(sortedArray) {
-    imagesContainer.innerHTML = ''; // Clear current images
-    sortedArray.forEach(([imageName, movie]) => {
-      const imgElement = document.createElement("img");
-      imgElement.src = "./assets/posters/" + imageName;
-      imgElement.alt = movie.title; // Optional: add alt text for accessibility
-  
-      const linkElement = document.createElement("a");
-      linkElement.href = "./poster-detail.html?imageUrl=" + encodeURIComponent("./assets/posters/" + imageName);
-      linkElement.appendChild(imgElement);
-  
-      imagesContainer.appendChild(linkElement);
-    });
-  }
+    const imagesContainer = document.querySelector('#poster-gallery');
+    if (imagesContainer) {
+        imagesContainer.innerHTML = ''; // Clear current images
+        sortedArray.forEach(([imageName, movie]) => {
+        const imgElement = document.createElement("img");
+        imgElement.src = "./assets/posters/" + imageName;
+        imgElement.alt = movie.title; // Optional: add alt text for accessibility
+    
+        const linkElement = document.createElement("a");
+        linkElement.href = "./poster-detail.html?imageUrl=" + encodeURIComponent("./assets/posters/" + imageName);
+        linkElement.appendChild(imgElement);
+    
+        imagesContainer.appendChild(linkElement);
+    })
+    } else {
+        console.error('The images container (#poster-gallery) does not exist in the DOM.');
+    };
+}
   
