@@ -1,4 +1,6 @@
-// Make sure to link this script after sorting-functions.js, update-sorting.js, and movieData.js
+
+// -------------------- clicking the back icon -------------------- //
+
 document.addEventListener("DOMContentLoaded", function() {
     const backLink = document.getElementById("back-link");
     
@@ -12,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
   
-    // This function is responsible for restoring the previous state only on the index page
+    // Restoring previous state only on the index page
     if (document.getElementById('poster-gallery')) {
       restorePreviousState();
     }
@@ -37,9 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
           sortedMovies = sortMoviesByRanking(movies);
           break;
         default:
-          // If for some reason the sorting method is not recognized,
-          // you can decide on a default behavior, e.g., do not sort
-          sortedMovies = Object.entries(movies); // Default to unsorted
+          // Default sorting
+          sortedMovies = Object.entries(movies); 
       }
   
       if (sortedMovies) {
@@ -54,10 +55,9 @@ document.addEventListener("DOMContentLoaded", function() {
     if (scrollPosition) {
       setTimeout(() => {
         window.scrollTo(0, parseInt(scrollPosition));
-      }, 0); // Delay may not be necessary, but included to ensure the page layout is ready
+      }, 0); 
     }
   }
-
 
   function updateSortingIcons(sortingMethod) {
     // Update the UI elements based on sortingMethod

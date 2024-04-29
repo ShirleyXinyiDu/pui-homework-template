@@ -1,3 +1,6 @@
+
+// -------------------- movie data -------------------- //
+
 const movies = {
     "1 jeanne dielman.jpg": {
         "title": "Jeanne Dielman, 23 Quai du Commerce, 1080 Bruxelles",

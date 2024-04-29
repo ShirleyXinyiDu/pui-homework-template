@@ -1,11 +1,13 @@
 
+// -------------------- search movie -------------------- //
+
 document.addEventListener('DOMContentLoaded', () => {
   const searchIcon = document.getElementById('search-icon');
   const searchInput = document.getElementById('search-input');
   const popupContainer = document.getElementById('popup-container');
   const closePopup = document.getElementById('close-circle');
   const body = document.body;
-  const searchResultTitle = document.getElementById('search-result-title'); // Make sure this exists in your HTML
+  const searchResultTitle = document.getElementById('search-result-title'); 
 
   function disableScroll() {
     body.style.overflow = 'hidden';
@@ -27,23 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Create the img element
             const img = document.createElement('img');
-            img.src = `assets/posters/${imageFileName}`;
+            img.src = 'assets/posters/${imageFileName}';
             img.alt = movie.title; // Use movie title as alt text for accessibility
 
-            // Create the anchor element wrapping the image
+            // Create the link element wrapping the image
             const link = document.createElement('a');
-            link.href = `./poster-detail.html?fromSearch=true&imageUrl=${encodeURIComponent("assets/posters/" + imageFileName)}`;
-            // link.href = `./poster-detail.html?imageUrl=${encodeURIComponent("assets/posters/" + imageFileName)}`;
-            // link.href = `./poster-detail.html?fromSearch=true`; // Flag indicating navigation from search
-            link.appendChild(img); // Append the image to the anchor
+            link.href = './poster-detail.html?fromSearch=true&imageUrl=${encodeURIComponent("assets/posters/" + imageFileName)}';
+            link.appendChild(img); // Append the image to the link
 
-            // Append the anchor element to the popupPosters
+            // Append the link element to popupPosters
             popupPosters.appendChild(link);
 
-            // // Add click listener to sort movies based on the clicked poster
-            // link.addEventListener('click', () => {
-            //     sortMoviesBasedOnPopup(movie);
-            // });
         });
         sessionStorage.setItem('searchResults', JSON.stringify(searchResultsNames));
         searchResultTitle.textContent = searchText; // Display the search text
@@ -53,9 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     popupContainer.style.display = 'flex';
-    disableScroll(); // Ensure this function exists to prevent scrolling when the popup is displayed
+    disableScroll(); // Disable scrolling of poster gallery when the popup is displayed
 }
-
 
   searchIcon.addEventListener('click', () => {
     const searchText = searchInput.value.toLowerCase();

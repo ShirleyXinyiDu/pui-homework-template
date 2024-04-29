@@ -1,9 +1,10 @@
 
+// -------------------- update my favorites page -------------------- //
 
 const myFavoritesList = document.getElementById('my-favorites-posters');
-const noFavoritesTextId = 'no-favorites-message'; // A unique ID for the message element
+const noFavoritesTextId = 'no-favorites-message'; 
 
-// Try to retrieve the favorites from localStorage or default to an empty array
+// Retrieve the favorites from localStorage or default to an empty array
 const starImages = JSON.parse(localStorage.getItem('starImages')) || [];
 
 // Function to update the display of favorites on the page
@@ -28,7 +29,6 @@ function updateFavoritesDisplay() {
 
             // Create a link element that leads to a detail page with the image as a parameter
             const detailPageUrl = "./poster-detail.html?imageUrl=" + encodeURIComponent(imagePath) + "&from=myFavorites";
-            // const detailPageUrl = "./poster-detail.html?imageUrl=" + encodeURIComponent(imagePath);
             const linkElement = document.createElement('a');
             linkElement.href = detailPageUrl;
             linkElement.appendChild(imgElement); // Append the <img> to the <a>
@@ -39,5 +39,4 @@ function updateFavoritesDisplay() {
     }
 }
 
-// Initial call to display favorites when the page loads
 updateFavoritesDisplay();
