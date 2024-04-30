@@ -88,7 +88,7 @@
     font-size: 13px;
 }
 
-/*-------------------------------------------*/
+/*----------------- phone portrait screen ----------------*/
 
 @media (max-width: 700px) {
     .detail-display{
@@ -152,6 +152,65 @@
         transform: translateX(-50%) rotate(-90deg); 
         width: 17px;
     }
+
+}
+
+/*----------------- phone landscape screen ----------------*/
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+    .detail-display{
+        position: static;
+    }
+
+
+    .poster-detail-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 10vw;
+        position: relative;
+        justify-content: space-between;
+        margin-bottom: 10vh;
+    } 
+
+    .source {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 23%;
+        top: 10vh;
+        text-align: right;
+    }
+
+    .detail {
+        position: relative; 
+        margin-top: 10vh; 
+        width: 40%;
+        height: auto;
+        margin-bottom: 10vh; 
+        left: 45%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column; 
+        justify-content: start;
+    }
+
+    .detail-info {
+        position: relative; 
+        width: 100%;
+        height: auto; 
+        top: 10vh; 
+    }
+
+    #poster-detail-img {
+        border: 1px solid rgb(255, 255, 255);
+        position: fixed;
+        top: 50%;
+        height: 80%;
+        width: auto;
+        transform: translate(-50%, -50%);
+        margin-bottom: 10vh; /* Bottom margin of 10vh */
+    }
+
 
 }
 
